@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;    
+    font-family: karla, sans-serif, Impact, "Arial Narrow Bold", sans-serif;
+    font-size: min(20px, calc(10px + 3vw));
+    font-weight: 600;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    position: relative;
+    background: #1F2937;
+    color: white;
+}
+
+.header {
+    background-color: #3A69D2;
+    /* background: linear-gradient(rgb(160, 160, 160), rgb(248, 248, 248)); */
+    /* height: calc(20px + 40vw); */
+    width: 100vw;
+    min-width: 2cm;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    flex-direction: column;
+    /* box-shadow: 0vw 2vw 4vw rgb(245, 244, 244); */
+    /* background-color: #F5F5F5; */
+}
+
+.title {
+    font-size: min(50px, 10vw);
+    font-weight: 900;
+    margin-bottom: max(10px, 2vw);
+    margin-top: max(2cm,2vw);
+}
+
+.subtitle {
+    font-size: min(20px, 5vw);
+    font-weight: 500;
+    margin-bottom: max(20px,10vw);
+    color: rgb(228, 228, 228);
+}
+
+.service-btn {
+    width: 100vw;
+    max-width: 20cm;
+    margin-top: max(10px, 6vw);
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-evenly;
+    padding-left: max(10px, 2vw);
+    padding-right: max(10px, 2vw);
+}
+
+.services {
+    font-weight: 900;
+    border: none;
+    min-width:2cm;
+    min-height: 0.5cm;
+    color: rgb(9, 9, 9);
+    padding: 2vw;
+    /* box-shadow: 0px 1vw 2vw rgba(153, 152, 152, 0.5); */
+    border-radius: 1vw;
+    transition: all ease 300ms;
+    background-color: #e6e8e6;
+    margin-bottom: 5vw;
+    /* margin-left: 4vw; */
+}
+.services:hover {
+    background-color: white;
+    transform: scale(0.93);
+}
+
+.invoice-title {
+    padding-left: 5vw;
+    padding-right: 5vw;
+    margin-top: min(1cm, 7vw);
+    display: flex;
+    width: 100vw;
+    max-width: 20cm;
+    justify-content: space-between;
+}
+
+.invoice {
+    width: 100vw;
+    max-width: 20cm;
+    display: flex;
+    flex-direction: column;
+    margin-top: min(0.5cm, 7vw);
+    transition: all ease 250ms;
+    /* padding: max(10px,); */
+}
+
+.service {
+    padding-left: 5vw;
+    padding-right: 5vw;
+    width: 100vw;
+    max-width: 20cm;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 2vw;
+}
+
+.service-name {
+    margin-right: max(5px, 10vw);
+}
+
+.remove-btn {
+    min-width:0.9cm;
+    min-height: 0.2cm;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    padding-top: 0.2vw;
+    padding-bottom: 0.3vw;
+    border-radius: 1vw;
+    font-size: min(12px, calc(7px + 1.5vw));
+    border: none;
+    background-color: inherit;
+    margin-right: auto;
+    font-weight: 600;
+    /* box-shadow: 0px 0.5vw 1vw rgba(153, 152, 152, 0.5); */
+    transition: all ease 200ms;
+    color: white;
+}
+
+.remove-btn:hover {
+    /* background-color: #ffffff; */
+    transform: scale(0.93);
+    font-weight: 100;
+}
+
+.bar {
+    width: 92vw;
+    max-width: 18cm;
+    color: rgb(76, 76, 76);
+    margin-top: max(10px, 2vw);
+}
+
+.invoice-footer {
+    /* font-size: 10px; */
+    margin-top: min(2cm, 7vw);
+    width: 100vw;
+    max-width: 20cm;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.total-amount {
+    /* font-size: 20px; */
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+    width: 100vw;
+    max-width: 20cm;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.send-invoice {
+    /* min-width:2cm; */
+    /* min-height: 0.8cm; */
+    width: 92vw;
+    max-width: 18cm;
+    height: max(0.8cm, 10vw);
+    /* min-height: 8vw; */
+    margin-top: min(2cm, 7vw);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 2vw;
+    /* box-shadow: 0px 1vw 2vw rgba(153, 152, 152, 0.5); */
+    transition: all ease 250ms;
+    background-color: #3A69D2;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+    margin-bottom: 5vw;
+    font-weight: 900;
+}
+
+.send-invoice:hover {
+    background-color: #5b8ffe;
+    transform: scale(0.95);
+    color: white;
+}
