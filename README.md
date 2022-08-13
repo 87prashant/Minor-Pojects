@@ -1,4 +1,4 @@
-# Minor-Pojects with HTML, CSS and JavaScript
+# Minor-Projects with HTML, CSS and JavaScript
 
 ### Invoice Generator
 
