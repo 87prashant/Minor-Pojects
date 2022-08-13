@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Random Password Generator</title>
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100&display=swap");
+
+@keyframes reloadAnim {
+  from {
+    font-size: 5px;
+    /* color: #10b981; */
+  }
+  to {
+    font-size: 50px;
+    /* color: #273549; */
+  }
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: karla, sans-serif, Impact, "Arial Narrow Bold", sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+}
+
+.app {
+  /* margin-top: 40px; */
+  width: 550px;
+  max-width: 550px;
+  height: 550px;
+  background: #ecfdf5;
+  position: relative;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
+}
+
+.title {
+  position: absolute;
+  width: 332px;
+  height: 80px;
+  left: 52px;
+  top: 110px;
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 40px;
+  letter-spacing: -0.05em;
+  color: #2b283a;
+}
+
+#title-one {
+  color: black;
+  text-decoration: underline;
+  text-decoration-thickness: 7px;
+  text-decoration-color: #273549;
+  transition: all ease 250ms;
+  animation: reloadAnim 0.6s;
+  animation-fill-mode: forwards;
+}
+
+#subtitle {
+  position: absolute;
+  width: 372px;
+  height: 28px;
+  left: 52px;
+  top: 200px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  color: #35383d;
+}
+
+#generator {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 9px 17px 9px 15px;
+  position: absolute;
+  width: 223px;
+  height: 42px;
+  left: 52px;
+  top: 279px;
+  background: #10b981;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.4);
+  border-radius: 6px;
+  border: none;
+  transition: all ease 250ms;
+}
+
+#generator:hover {
+  transform: scale(1.04);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
+  background: #009564;
+}
+
+#size-selector {
+  background-color: inherit;
+  position: absolute;
+  width: 45px;
+  height: 60px;
+  left: 440px;
+  top: 266px;
+  border: none;
+  font-size: 40px;
+  font-weight: 900;
+  color: #10b981;
+  outline: none;
+  text-align: center;
+}
+
+#size-selector::-webkit-outer-spin-button,
+#size-selector::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#enter-len {
+  position: absolute;
+  top: 290px;
+  left: 340px;
+  font-weight: 900;
+  color: #35383d;
+}
+
+#break {
+  position: absolute;
+  width: 446px;
+  height: 0px;
+  left: 52px;
+  top: 356px;
+  border: 1px solid #d5d4d8;
+}
+
+.password {
+  position: absolute;
+  width: 211px;
+  height: 39px;
+  background: #273549;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ecfdf5;
+  font-weight: 900;
+  transition: all ease 250ms;
+}
+
+.password:hover {
+  transform: scale(1.04);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
+  background: #26313b;
+}
+
+.one {
+  left: 52px;
+  top: 391px;
+}
+
+.two {
+  left: 287px;
+  top: 391px;
+}
+
+.three {
+  left: 52px;
+  top: 457px;
+}
+
+.four {
+  left: 287px;
+  top: 457px;
+}
+
+#notice {
+  position: absolute;
+  height: 25px;
+  left: 52px;
+  top: 366px;
+  text-align: center;
+  color: red;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 12px;
+}
+
+.notification {
+  position: absolute;
+  width: 300px;
+  height: 35px;
+  /* background-color: red; */
+  left: 125px;
+  top: 1px;
+  border-radius: 3px;
+  display: none;
+  padding: 10px;
+  font-weight: 900;
+  color: #10b981;
+  font-size: 14px;
+  box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.3);
+}
+
+#cross-btn {
+  position: absolute;
+  right: 10px;
+  width: 30px;
+  height: 33px;
+  border: none;
+  top: 1px;
+  background-color: inherit;
+  border-radius: 50%;
+  box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes notAnim {
+  from {
+    top: 0px;
+  }
+  to {
+    top: 25px;
+  }
+  
+}
+
+.notification-new {
+  display: flex;
+  animation: notAnim 900ms;
+/* animation-fill-mode should be after the animation otherwise the output will be reverse */
+  animation-fill-mode: forwards;
+}
+</style>
+</head>
+<body onload="onReload()">
+    <div class="app">
+        <div class="notification">
+            <p>The password is Copied!!</p>
+            <button id="cross-btn" onclick="removeNotif()" ><img src="images.svg" alt="X" style="width: 100%; height: 100%;"></button>
+        </div>
+        <div class="title">
+            <p id="title-one">Generate a</p>
+            <p style="color: #10B981;">random password</p>
+        </div>
+        <p id="subtitle">Never use an insecure password again.</p>
+        <button id="generator" onclick="renderPass()">
+            <img src="Lightning bolt.png" style="margin-right: 20px;" alt="\/"> 
+            <p style="color: #ecfdf5; font-weight: 900; font-size: 15px;">Generate passwords</p>
+        </button>
+        <p id="enter-len">Enter length</p>
+        <input type="text" placeholder="0" value="8" id="size-selector" maxlength="2" max="18" min="6">
+        <hr id="break">
+        <p id="notice"></p>
+        <button class="password one" onclick="copyPass(0)"></button>
+        <button class="password two" onclick="copyPass(1)"></button>
+        <button class="password three" onclick="copyPass(2)"></button>
+        <button class="password four" onclick="copyPass(3)"></button>
+    </div>
+<script>
+// storing all the characters and symbols in the array
+let randCharArray = [];
+for (let i = 33; i < 127; i++) {
+  randCharArray.push(String.fromCharCode(i));
+}
+
+// returns random characters
+function returnRandom() {
+  let ranValue = Math.floor(Math.random() * 94);
+  return randCharArray[ranValue];
+}
+
+//size of passwords and password array
+let size;
+let passArray;
+
+// Array store new passwords
+function newpass() {
+  size = document.querySelector("#size-selector").value;
+  if (size < 19 && size > 5) {
+    validLength();
+    passArray = [];
+    for (let i = 0; i < 4; i++) {
+      let pass = "";
+      for (let j = 0; j < size; j++) {
+        pass += returnRandom();
+      }
+      passArray.push(pass);
+    }
+  } else {
+    passArray = [];
+    inValidLength();
+  }
+}
+
+// Rendering the passwords
+function renderPass() {
+  newpass();
+  let firstpass = document.querySelector(".one");
+  firstpass.textContent = passArray[0];
+
+  let secondpass = document.querySelector(".two");
+  secondpass.textContent = passArray[1];
+
+  let thirdpass = document.querySelector(".three");
+  thirdpass.textContent = passArray[2];
+
+  let fourthpass = document.querySelector(".four");
+  fourthpass.textContent = passArray[3];
+}
+
+// functions for valid/invalid length
+let noticeEl = document.querySelector("#notice");
+let passEl = document.querySelectorAll(".password");
+function validLength() {
+  noticeEl.style.color = "#009564";
+  noticeEl.textContent = "Four random passwords are generated (Click to copy):";
+  for (let i = 0; i < passEl.length; i++) {
+    passEl[i].style.display = "flex";
+  }
+}
+function inValidLength() {
+  noticeEl.style.color = "red";
+  noticeEl.textContent = "Select length between 5 and 19!!";
+  for (let i = 0; i < passEl.length; i++) {
+    passEl[i].style.display = "none";
+  }
+}
+
+//copy passwords
+function copyPass(i) {
+  //don't know why this is not working (removing the previous notification and re-animating it)
+  removeNotif()
+  let copyArray = document.querySelectorAll(".password");
+  currentPass = copyArray[i];
+  copyText.setSelectionRange(0, 99999);
+  let currentCopy = navigator.clipboard.writeText(currentPass.textContent);
+  
+  let notifEl = document.querySelector(".notification");
+  notifEl.classList.add("notification-new");
+}
+
+//on reload
+function onReload() {
+  renderPass();
+}
+
+//remove the notification
+function removeNotif() {
+  let notifEl = document.querySelector(".notification");
+  notifEl.classList.remove("notification-new");
+}
+
+</script>
+</body>
+</html>
