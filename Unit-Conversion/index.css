@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  background-color: rgb(0, 0, 0);
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.total {
+  position: relative;
+  width: 550px;
+  height: 550px;
+  background-color: rgb(228, 228, 228);
+  border-radius: 8px;
+}
+
+.header {
+  position: absolute;
+  width: 550px;
+  height: 260px;
+  left: 0px;
+  top: 0px;
+  background: linear-gradient(246.26deg, #585dfe 0%, #fb3796 100%);
+  border-radius: 8px;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.62);
+}
+
+.header h4 {
+  position: absolute;
+  background-color: inherit;
+  width: 448.4px;
+  height: 38px;
+  left: 51px;
+  top: 53px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 22px;
+  line-height: 38px;
+  letter-spacing: -0.05em;
+  color: #ffffff;
+  text-shadow: 0px 6px 6px rgba(113, 111, 111, 0.62);}
+
+.header input {
+  position: absolute;
+  background-color: inherit;
+  width: 500px;
+  height: 80px;
+  left: 25px;
+  border: none;
+  top: 120px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 4px;
+  text-align: center;
+  color: #ffffff;
+  text-shadow: 0px 8px 6px rgba(90, 90, 90, 0.62);
+}
+
+.header input:focus{
+    outline: none;
+}
+
+.length {
+  position: absolute;
+  background-color: inherit;
+  width: 346px;
+  height: 55px;
+  left: 102px;
+  top: 297px;
+}
+
+.volume {
+  position: absolute;
+  background-color: inherit;
+  width: 346px;
+  height: 55px;
+  left: 102px;
+  top: 379px;
+}
+
+.mass {
+  position: absolute;
+  background-color: inherit;
+  width: 346px;
+  height: 51px;
+  left: 102px;
+  top: 461px;
+}
+
+.conversionHead {
+  font-family: "Inter";
+  background-color: inherit;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.conversionContent {
+  font-family: "Inter";
+  background-color: inherit;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #4e4e4e;
+}

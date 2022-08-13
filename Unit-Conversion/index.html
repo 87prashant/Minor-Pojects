@@ -1,0 +1,31 @@
+<html>
+
+<head>
+    <title>Unit Converter</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body onload="newConversions()">
+    <div class="total">
+        <div class="header">
+            <h4>Metric/Imperial unit Conversion</h4>
+            <input value = "20" id="input" onkeyup="newConversions()" autocapitalize="words">
+        </div>
+
+        <div class="length">
+            <p class="conversionHead">Length(Meter/Feet)</p>
+            <p class="conversionContent" id="lengthOutput"></p>
+        </div>
+        <div class="volume">
+            <p class="conversionHead">Volume(Liters/Gallons)</p>
+            <p class="conversionContent" id="volumeOutput"></p>
+        </div>
+        <div class="mass">
+            <p class="conversionHead">Mass(Kilograms/Pounds)</p>
+            <p class="conversionContent" id="massOutput"></p>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
